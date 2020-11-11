@@ -1,7 +1,7 @@
 #ifndef LISTS_H
 #define LISTS_H
 #include "transaction_list.h"
-#include "ptrfunc.h"
+#include "ptrfuncs.h"
 
 /* Code taken from 'Joy of C. Programming in C second edition' - Miller, Quilici*/
 

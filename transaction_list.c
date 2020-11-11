@@ -1,5 +1,5 @@
 #include "transaction_list.h"
-
+#include <stdlib.h>
 /* Code taken from 'Joy of C. Programming in C second edition' - Miller, Quilici*/
 
 LISTNODE *ln_create(struct transaction *dataptr, LISTNODE *nodeptr)

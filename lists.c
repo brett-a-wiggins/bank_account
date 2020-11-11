@@ -1,5 +1,5 @@
 #include "lists.h"
-
+#include <stdlib.h>
 /* Code taken from 'Joy of C. Programming in C second edition' - Miller, Quilici*/
 
 
