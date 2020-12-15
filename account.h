@@ -9,15 +9,15 @@ struct account{
 	LISTNODE *transactions;
 };
 
-int update_account_number(struct account *acct);
-int update_account_bsb(struct account *acct);
-double update_balance(struct account *acct);
+void update_account_number(struct account *acct);
+void update_account_bsb(struct account *acct);
+void update_balance(struct account *acct);
 
 void print_account_number(struct account *acct);
 void print_bsb(struct account *acct);
 void print_balance(struct account *acct);
 void print_transactions(struct account *acct);
 
-struct account *new_account(void);
+struct account *create_new_account(void);
 void delete_account(struct account *acct);
 #endif

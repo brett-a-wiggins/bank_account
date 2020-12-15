@@ -5,19 +5,31 @@
 
 
 
-int update_account_number(struct account *acct)
+void update_account_number(struct account *acct)
 {
-	return 0;
+	int new_acct_num;
+	printf("Please enter a new account number: ");
+	scanf("%d",&new_acct_num);
+	acct->account_number = new_acct_num;
+	printf("Account number updated.\n");
 }
 
-int update_account_bsb(struct account *acct)
+void update_account_bsb(struct account *acct)
 {
-	return 0;
+	int new_acct_bsb;
+	printf("Please enter new account BSB: ");
+	scanf("%d",&new_acct_bsb);
+	acct->account_bsb = new_acct_bsb;
+	printf("BSB updated\n");
 }
 
-double update_balance(struct account *acct)
+void update_balance(struct account *acct)
 {
-	return 0.0;
+	double new_acct_balance;
+	printf("Please enter a new account balance: ");
+	scanf("%lf", &new_acct_balance);
+	acct->account_balance = new_acct_balance;
+	printf("Account balance updated\n");
 }
 
 void print_account_number(struct account *acct)
@@ -56,6 +68,8 @@ void print_balance(struct account *acct)
 	}
 }
 
+
+
 void print_transactions(struct account *acct)
 {
 	LISTNODE *listptr;
@@ -89,9 +103,27 @@ void print_transactions(struct account *acct)
 	}
 }
 
-struct account *new_account(void)
+struct account *create_new_account(void)
 {
-	return NULL;
+	struct account *new_account;
+	int account_number;
+	int account_bsb;
+	double account_balance;
+
+	printf("Please enter the account number: ");
+	scanf("%d", &account_number);
+	printf("Please enter the account BSB: ");
+	scanf("%d", &account_bsb);
+	printf("Please enter the opening balance: ");
+	scanf("%lf", &account_balance);
+	new_account = (struct account *) malloc(sizeof(struct account));
+
+	new_account->account_number = account_number;
+	new_account->account_bsb = account_bsb;
+	new_account->account_balance = account_balance;
+	new_account->transactions = (LISTNODE *) malloc(sizeof(LISTNODE));
+
+	return new_account;
 
 }
 void delete_account(struct account *acct)
