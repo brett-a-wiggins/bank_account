@@ -7,5 +7,8 @@ struct account_list{
 };
 
 
+struct account_list *create_new_account_list(void);
+void delete_account_list(struct account_list *);
+void new_account_node(struct account_list *);
 
 #endif
