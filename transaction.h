@@ -10,4 +10,6 @@ struct transaction{
 	double transaction_amount;
 };
 
+struct transaction *new_transaction(void);
+void print_transaction(struct transaction*);
 #endif

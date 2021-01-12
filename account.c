@@ -81,13 +81,7 @@ void print_transactions(struct account *acct)
 			while(listptr != NULL)
 			{
 				
-					printf("\n");
-					printf("Transaction Number: %d\n", listptr->transaction_entry->transaction_number);
-					printf("Transaction Date:  %d-%d-%d",listptr->transaction_entry->transaction_date->tm_year, listptr->transaction_entry->transaction_date->tm_mon+1, listptr->transaction_entry->transaction_date->tm_mday);
-					printf("Transaction Description: %s\n", listptr->transaction_entry->transaction_description);
-					printf("Transaction category: %s\n", listptr->transaction_entry->transaction_category);
-					printf("Transaction amount: %lf\n", listptr->transaction_entry->transaction_amount);
-					printf("\n");
+					print_transaction(listptr->transaction_entry);
 				
 					listptr = listptr->nextptr;
 			}
