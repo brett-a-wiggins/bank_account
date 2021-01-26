@@ -23,9 +23,7 @@ struct account_list *create_new_account_list(void)
 
 void new_account_node(struct account_list *acct_list)
 {
-	// struct account_list *head;
-	// struct account_list *current_node;
-	// struct account_list *new_node;
+	
 	
 	//head = acct_list;
 
